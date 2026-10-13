@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Search books using the Open Library API.">
+    <title>Book Finder</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <main class="container">
+        <header class="page-header">
+            <p class="eyebrow">OPEN LIBRARY SEARCH</p>
+            <h1>Find your next read</h1>
+            <p class="intro">Search millions of books by title, author, or subject.</p>
+        </header>
+
+        <form id="searchForm" class="search-form">
+            <label class="visually-hidden" for="searchInput">Book title, author, or subject</label>
+            <input
+                id="searchInput"
+                name="query"
+                type="search"
+                value="javascript"
+                placeholder="Try a title, author, or subject"
+                required
+            >
+            <button id="loadBooks" type="submit">Search books</button>
+        </form>
+
+        <p id="statusMessage" class="status-message" role="status" aria-live="polite">
+            Search for a book to see results.
+        </p>
+        <section id="bookList" class="book-grid" aria-label="Book search results"></section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
